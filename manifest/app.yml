@@ -1,0 +1,14 @@
+# develop team / feature team 填寫, 定義 service 的 manifest
+# build 時應該把這些 manifest.yml 自動轉成 appsettings
+
+APP:
+- Name: MyAPI
+- Namespace: N1.Service.MyAPI
+
+
+
+# CI/CD 時, IS 會將相關的 config 一起部署到執行環境內
+Load-Config:
+- module1
+- module2
+- module3
