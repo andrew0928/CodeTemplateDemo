@@ -58,8 +58,13 @@ namespace MyWebAPI
                 "_N1Config:APP:Namespace",
 
                 "_N1Config:Module1:Name",
+                "_N1Config:Module1:Version",
+
                 "_N1Config:Module2:Name",
-                "_N1Config:Module3:Name" })
+                "_N1Config:Module2:Version",
+
+                "_N1Config:Module3:Name",
+                "_N1Config:Module3:Version"})
             {
                 Console.WriteLine("{0}: \t{1}", key, this.Configuration.GetValue<string>(key, "<NULL>"));
             }
