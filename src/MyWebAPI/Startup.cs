@@ -30,6 +30,8 @@ namespace MyWebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -43,6 +45,20 @@ namespace MyWebAPI
             {
                 endpoints.MapControllers();
             });
+
+            
+
+            // TODO: show console output, demo usage of .net core configuration
+            foreach (var key in new string[] {
+                "SETTING1", // from: N1Env_SETTING1
+                "SETTING2",
+                "SETTING3",
+                "_N1Config:Module1:Name",
+                "_N1Config:Module2:Name",
+                "_N1Config:Module3:Name" })
+            {
+                Console.WriteLine("{0}: \t{1}", key, this.Configuration.GetValue<string>(key, "<NULL>"));
+            }
         }
     }
 }
