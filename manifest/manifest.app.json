@@ -1,0 +1,9 @@
+{
+    "_N1Config":
+    {
+        "APP": {
+            "Name": "MyAPI",
+            "Namespace": "N1.Service.MyAPI"
+        }
+    }
+}

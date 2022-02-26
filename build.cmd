@@ -21,9 +21,9 @@ popd
 
 
 :: launch for global settings
-docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1Env_SETTING1=TW -e N1Env_SETTING2=6741 -v %CD%/config/module1.json:/app/config/module1.json andrew.mywebapi:build
+docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1Env_SETTING1=TW -e N1Env_SETTING2=6741 -v %CD%/config/module1.json:/app/config/module1.json -v %CD%/manifest/manifest.app.json:/app/config/manifest.app.json andrew.mywebapi:build
 
 :: launch for TW settings
-docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1Env_SETTING1=TW -e N1Env_SETTING2=6741 -v %CD%/config/module1.TW.json:/app/config/module1.json andrew.mywebapi:build
+docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1Env_SETTING1=TW -e N1Env_SETTING2=6741 -v %CD%/config/module1.TW.json:/app/config/module1.json -v %CD%/manifest/manifest.app.json:/app/config/manifest.app.json andrew.mywebapi:build
 
 :end

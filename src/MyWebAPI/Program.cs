@@ -26,6 +26,9 @@ namespace MyWebAPI
 
                     // TODO: 開發者決定要載入的 module config, 必須同步標記於 manifest, IS 才能對應部署。可考慮改寫這段 code 對齊 manifest
                     config.AddJsonFile("config/module1.json", false, true);
+
+                    // TODO: app manifest
+                    config.AddJsonFile("config/manifest.app.json", false, false);
                 })
 
                 .ConfigureWebHostDefaults(webBuilder =>

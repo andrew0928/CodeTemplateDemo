@@ -53,6 +53,10 @@ namespace MyWebAPI
                 "SETTING1", // from: N1Env_SETTING1
                 "SETTING2",
                 "SETTING3",
+
+                "_N1Config:APP:Name",
+                "_N1Config:APP:Namespace",
+
                 "_N1Config:Module1:Name",
                 "_N1Config:Module2:Name",
                 "_N1Config:Module3:Name" })
