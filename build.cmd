@@ -1,3 +1,9 @@
+
+
+
+::
+::  Our build script here. build to local only
+::
 pushd .
 cd src/MyWebAPI
 docker rm -f demo
@@ -8,6 +14,7 @@ copy dockerfile-stdalone bin\Release\netcoreapp3.1\publish\dockerfile
 copy ..\.dockerignore   bin\Release\netcoreapp3.1\publish
 cd  bin\Release\netcoreapp3.1\publish
 docker build -t andrew.mywebapi:build .
+:: todo: push docker image to shared registry.
 popd
 
 

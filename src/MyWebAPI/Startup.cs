@@ -48,7 +48,7 @@ namespace MyWebAPI
 
             
 
-            // TODO: show console output, demo usage of .net core configuration
+            // TODO: (demo) show console output, demo usage of .net core configuration
             foreach (var key in new string[] {
                 "SETTING1", // from: N1Env_SETTING1
                 "SETTING2",
