@@ -29,10 +29,15 @@ namespace MyWebAPI
                     config.AddJsonFile("config/module1.json", false, true);
 
                     // TODO: (demo)
+                    var _env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                     var _mkt = Environment.GetEnvironmentVariable("N1ENV_MARKET");
 
                     config.AddJsonFile($"config/91app.json", false, false);
+                    config.AddJsonFile($"config/91app.{_env}.json", true, false);
                     config.AddJsonFile($"config/91app.{_mkt}.json", true, false);
+
+                    config.AddJsonFile($"config/91app-secret.json", false, false);
+                    config.AddJsonFile($"config/91app-secret.{_mkt}.json", true, false);
 
                     // TODO: (template) 在樣板就先加入 app manifest
                     config.AddJsonFile("config/manifest.app.json", true, false);
