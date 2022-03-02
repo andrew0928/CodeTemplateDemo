@@ -1,0 +1,10 @@
+{
+    "_N1Config":
+    {
+      "91APP": {
+        "Version": "1.0.0.0",
+        "Name": "Demo Service for Module1",
+        "Owner": "andrew@91.com"
+      }
+    }
+}

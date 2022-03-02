@@ -28,8 +28,14 @@ namespace MyWebAPI
                     // TODO: (demo) 包裝的程式碼，除了要 check required file, 也要 check required version, 必須滿足最小版號要求。用 SemVer 的規則，要求相同的 major version number, 要求最低的 minor version number. 至於 patch / build 則不在此限
                     config.AddJsonFile("config/module1.json", false, true);
 
+                    // TODO: (demo)
+                    var _mkt = Environment.GetEnvironmentVariable("N1ENV_MARKET");
+
+                    config.AddJsonFile($"config/91app.json", false, false);
+                    config.AddJsonFile($"config/91app.{_mkt}.json", true, false);
+
                     // TODO: (template) 在樣板就先加入 app manifest
-                    config.AddJsonFile("config/manifest.app.json", false, false);
+                    config.AddJsonFile("config/manifest.app.json", true, false);
                 })
 
                 .ConfigureWebHostDefaults(webBuilder =>

@@ -32,5 +32,6 @@ docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1ENV_SET
 
 :: launch for TW / production settings
 docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1ENV_SETTING1=TW -e N1Env_SETTING2=6741 -v %CD%/config/module1.TW.json:/app/config/module1.json -v %CD%/manifest/manifest.app.json:/app/config/manifest.app.json andrew.mywebapi:build
+docker run -d --rm --name demo -e ASPNETCORE_ENVIRONMENT=Production -e N1ENV_MARKET=TW   -e N1Env_SETTING2=6741 -v %CD%/config/module1.TW.json:/app/config/module1.json -v %CD%/manifest/manifest.app.json:/app/config/manifest.app.json andrew.mywebapi:build
 
 :end

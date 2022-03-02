@@ -35,6 +35,7 @@ namespace MyWebAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                Console.WriteLine("****** DEV Mode *******");
             }
 
             app.UseRouting();
@@ -53,6 +54,8 @@ namespace MyWebAPI
                 "SETTING1", // from: N1Env_SETTING1
                 "SETTING2",
                 "SETTING3",
+
+                "_N1Config:91APP:Name",
 
                 "_N1Config:APP:Name",
                 "_N1Config:APP:Namespace",

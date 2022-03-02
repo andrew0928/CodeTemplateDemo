@@ -6,9 +6,9 @@
 1. vs: build and run -> OK
 
 開發階段:
-1. 指定需要載入的 config module
+1. ~~指定需要載入的 config module~~
 1. local run (native app)
-1. build and remote run (container + mount config module)
+1. build and remote run (container + mount config ~~module~~)
 
 
 
